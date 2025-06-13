@@ -10,7 +10,7 @@ public class GetClientDataBaseController {
         Statement statement = null;
         ResultSet resultSet = null;
 
-        String query = "SELECT * FROM client";
+        String query = "SELECT * FROM clients";
 
         try {
             connection = GetConnectionDataBaseController.getConnection();
@@ -22,12 +22,13 @@ public class GetClientDataBaseController {
                 String name = resultSet.getString("name");
                 String surname = resultSet.getString("surname");
                 String email = resultSet.getString("email");
-                String phone = resultSet.getString("phone");
+                String phone = resultSet.getString("telephone");
 
-                System.out.println("id: " + id + "\tname: " + name + "\tsurname: " + surname + "\temail: " + email + "\tphone: " + phone);
+                System.out.println("id: " + id + "\n" + "name: " + name + "\n" +  "surname: " + surname + "\n" +  "email: " + email + "\n" + "telephone: " + phone);
+                System.out.println("----------------------------");
             }
         } catch (Exception e) {
-            System.out.println("Error getting client data");
+            System.out.println("Error getting client data" + e.getMessage());
         } finally {
             try{
                 if (connection != null) connection.close();
