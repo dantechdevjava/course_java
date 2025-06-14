@@ -3,6 +3,7 @@ package app;
 import controller.GetClientDataBaseController;
 import controller.GetConnectionDataBaseController;
 import controller.InsertClientDataBaseController;
+import controller.UpdateClientDataBaseController;
 
 import java.sql.Connection;
 
@@ -15,6 +16,7 @@ public class Main {
         }
 
         //InsertClientDataBaseController.insertClient();
+        UpdateClientDataBaseController.updateClient();
         GetClientDataBaseController.getClient();
     }
 }
