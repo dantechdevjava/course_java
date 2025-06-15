@@ -1,9 +1,6 @@
 package app;
 
-import controller.GetClientDataBaseController;
-import controller.GetConnectionDataBaseController;
-import controller.InsertClientDataBaseController;
-import controller.UpdateClientDataBaseController;
+import controller.*;
 
 import java.sql.Connection;
 
@@ -14,9 +11,12 @@ public class Main {
         if (connection != null) {
             System.out.println("Connection Successful");
         }
-
         //InsertClientDataBaseController.insertClient();
-        UpdateClientDataBaseController.updateClient();
-        GetClientDataBaseController.getClient();
+
+        //UpdateClientDataBaseController.updateClient();
+
+        //GetClientDataBaseController.getClient();
+
+        DeleteClientDataBaseController.deleteClient();
     }
 }
