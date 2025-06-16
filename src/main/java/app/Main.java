@@ -3,14 +3,19 @@ package app;
 import controller.*;
 import model.AnimalAbstractClassModel;
 import model.CatAbstractClassModel;
+import model.MethodVarArgsModel;
 
 import java.sql.Connection;
 
 public class Main {
     public static void main(String[] args) {
-        // Abstract classes implements
+        System.out.println("IMPLEMENTATION ABSTRACT CLASS MODEL");
         AnimalAbstractClassModel animalOne = new CatAbstractClassModel();
         animalOne.makeSound();
+
+        System.out.println("IMPLEMENTATION METHOD WITH ARGUMENTS");
+        MethodVarArgsModel methodOne = new MethodVarArgsModel();
+        methodOne.printNumbers(12,13,54,6);
 
 //        Connection connection = GetConnectionDataBaseController.getConnection();
 //
